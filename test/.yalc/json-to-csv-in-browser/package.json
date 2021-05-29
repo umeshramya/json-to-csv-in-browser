@@ -1,10 +1,10 @@
 {
   "name": "json-to-csv-in-browser",
-  "version": "1.0.2+1b04a98c",
+  "version": "1.0.2+e2724965",
   "description": "This converts the json array in the browser to csv file that can be stored in disc",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "tsc -p . && yalc publish && cd test && yalc update json-to-csv-in-browser && browserify client.js -o bundle.js"
+    "dev": "tsc -p . && cd lib && browserify index.js -o bundle.js && cd ../ && yalc publish && cd test && yalc update json-to-csv-in-browser && browserify client.js -o bundle.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,5 @@
     "url": "https://github.com/umeshramya/json-to-csv-in-browser/issues"
   },
   "homepage": "https://github.com/umeshramya/json-to-csv-in-browser#readme",
-  "yalcSig": "1b04a98c92f5ee9924d9ece00272d122"
+  "yalcSig": "e27249653251be09793d8348ed24b199"
 }
