@@ -1,18 +1,20 @@
 import {JsonArray, download} from "../lib/index.js"
 
+mybtn = document.getElementById("btn").addEventListener("click",()=>{
 
   let arr = [
-    {name : "umesh", age : 53},
+    {name : `umesh, bilsgai
+    sghg 
+    susuus`, age : 53},
     {name : "ramya", age : 38},
     {name : "pradyu", age : 22}
 ]
+  let jsonArray = new JsonArray(arr);
+  let str = jsonArray.convertToCSVstring();
+  download("my.csv", str);
 
-console.log("umesh")
+})
 
-let jsonArray = new JsonArray(arr);
-let str = jsonArray.convertToCSVstring();
-console.log(str);
-download("my.csv", str);
 
 
 

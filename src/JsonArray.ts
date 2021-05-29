@@ -13,10 +13,13 @@ export class JsonArray{
             this._JsonArray.forEach(arr=>{
                 let line:string=""
                 this._headers.forEach(head=>{
+                    let val:string = arr[head] === undefined ? "" : arr[head];
+                    val = val.toString().search(",") >= 0  ? `"${val}"` : val
                     if(line.length){
-                        line=`${line}, ${arr[head] === undefined ? "" : `"${arr[head]}"`}`
+                        
+                        line=`${line}, ${val}`;
                     }else{
-                        line=`${arr[head] === undefined ? "" : `"${arr[head]}"`}`
+                        line=`${val === undefined ? "" : val}`
                     }
                     
                 })
