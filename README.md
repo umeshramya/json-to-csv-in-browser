@@ -24,8 +24,8 @@ supply jsonarray it will give back file of csv
 ```
 
 ```javascript
+ import {JsonArray, download} from "./node_modules/json-to-csv-in-browser/lib/index.js"
 
-import {JsonArray, download} from "json-to-csv-in-browser"
 
 mybtn = document.getElementById("btn").addEventListener("click",()=>{
 
@@ -39,7 +39,5 @@ mybtn = document.getElementById("btn").addEventListener("click",()=>{
   let jsonArray = new JsonArray(arr);
   let str = jsonArray.convertToCSVstring();
   download("my.csv", str);
-
-})
 
 ```
