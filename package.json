@@ -4,7 +4,7 @@
   "description": "This converts the json array in the browser to csv file that can be stored in disc",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev" : "tsc -p ."
   },
   "repository": {
     "type": "git",

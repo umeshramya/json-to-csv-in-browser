@@ -1,0 +1,1 @@
+{"version":3,"file":"JsonArray.d.ts","sourceRoot":"","sources":["../src/JsonArray.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,SAAS;IAC1B,OAAO,CAAC,UAAU,CAAM;IACxB,OAAO,CAAC,UAAU,CAAS;IAC3B,OAAO,CAAC,QAAQ,CAAW;gBAEf,SAAS,EAAC,GAAG,EAAE;IAKpB,kBAAkB,IAAG,MAAM;IAmBlC,OAAO,CAAC,UAAU;CAGrB"}

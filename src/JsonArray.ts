@@ -5,29 +5,31 @@ export default class JsonArray{
 
     constructor(JsonArray:any[]){
         this._JsonArray =JsonArray;
+       this.setHeaders();
     }
 
-    private convertToCSVstring(){
+    public convertToCSVstring():string{
         let str:string = this._headers.toString();
-        this._headers.forEach(el=>{
-            let line:string;
-            this._JsonArray.forEach(it=>{
-                if(it[el]){
-
-                    line = `${line},${it[el].replace(",", '","')},`
-                }else{
-                    line = `${line}, "",`
-                }
-                
+            this._JsonArray.forEach(arr=>{
+                let line:string=""
+                this._headers.forEach(head=>{
+                    if(line.length){
+                        line=`${line}, ${arr[head] === undefined ? "" : `"${arr[head]}"`}`
+                    }else{
+                        line=`${arr[head] === undefined ? "" : `"${arr[head]}"`}`
+                    }
+                    
+                })
+                str= str + "\n" + line;
             })
 
-        })
+        return str;
 
     }
 
-    private setHeaders(){
-        Object.keys(this._JsonArray[0]).forEach(key=>{
-            this._headers.push(key)
-        })
+    private setHeaders(){ 
+        this._headers= Object.keys(this._JsonArray[0]).map(key=>key)
     }
 }
+
+
