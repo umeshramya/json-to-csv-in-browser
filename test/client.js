@@ -1,4 +1,4 @@
-import {JsonArray, download} from "../lib/index.js"
+var {JsonArray, download} = require("json-to-csv-in-browser")
 
 mybtn = document.getElementById("btn").addEventListener("click",()=>{
 
