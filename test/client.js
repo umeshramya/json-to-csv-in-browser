@@ -1,7 +1,6 @@
-import {JsonArray} from "../lib/index"
-// const {JsonArray} = require("../lib/index")
+import {JsonArray, download} from "../lib/index.js"
 
-window.onload(e=>{
+
   let arr = [
     {name : "umesh", age : 53},
     {name : "ramya", age : 38},
@@ -10,8 +9,11 @@ window.onload(e=>{
 
 console.log("umesh")
 
+let jsonArray = new JsonArray(arr);
+let str = jsonArray.convertToCSVstring();
+console.log(str);
+download("my.csv", str);
 
 
 
-})
 

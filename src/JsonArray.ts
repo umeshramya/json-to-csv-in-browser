@@ -1,4 +1,4 @@
-export default class JsonArray{
+export class JsonArray{
     private _JsonArray:any[]
     private _csvString!:string;
     private _headers!:string[];

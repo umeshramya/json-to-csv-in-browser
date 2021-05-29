@@ -1,4 +1,4 @@
-export default class JsonArray {
+export declare class JsonArray {
     private _JsonArray;
     private _csvString;
     private _headers;

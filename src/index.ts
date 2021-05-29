@@ -1,4 +1,5 @@
-import JsonArray from "./JsonArray"
+import {JsonArray} from "./JsonArray.js"
+import {download} from "./download.js" 
 
-export {JsonArray}
+export {JsonArray, download}
 
