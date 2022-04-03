@@ -13,7 +13,7 @@ var JsonArray = /** @class */ (function () {
         this._JsonArray.forEach(function (arr) {
             var line = "";
             _this._headers.forEach(function (head) {
-                var val = arr[head] === undefined ? "" : arr[head];
+                var val = arr[head] == undefined ? "" : arr[head];
                 val = val.toString().search(",") >= 0 ? "\"" + val + "\"" : val;
                 if (line.length) {
                     line = line + ", " + val;

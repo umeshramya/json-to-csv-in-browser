@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "json-to-csv-in-browser": {
-      "signature": "50418b8f1142a3c3a118c0e174c571dc",
+      "signature": "bc6e1a1136dd09cfe9e42101887287ba",
       "file": true
     }
   }
