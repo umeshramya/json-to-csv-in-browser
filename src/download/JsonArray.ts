@@ -14,7 +14,8 @@ export class JsonArray {
       let line: string = "";
       this._headers.forEach((head) => {
         let val: string = arr[head] == undefined ? "" : arr[head];
-        val=val.replace(/"/g,'""')
+        if (typeof val === 'string')
+          val = val?val.replace(/"/g, '""'):val;
         if (line.length) {
           line = `${line},"${val}"`;
         } else {
