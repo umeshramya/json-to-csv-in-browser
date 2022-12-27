@@ -14,11 +14,12 @@ export class JsonArray {
       let line: string = "";
       this._headers.forEach((head) => {
         let val: string = arr[head] == undefined ? "" : arr[head];
-        val = val.toString().search(",") >= 0 ? `"${val}"` : val;
+        if (typeof val === 'string')
+          val = val?val.replace(/"/g, '""'):val;
         if (line.length) {
-          line = `${line}, ${val}`;
+          line = `${line},"${val}"`;
         } else {
-          line = `${val === undefined ? "" : val}`;
+          line = `"${val === undefined ? "" : val}"`;
         }
       });
       str = str + "\n" + line;

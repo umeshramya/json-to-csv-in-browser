@@ -59,12 +59,13 @@ var JsonArray = /** @class */ (function () {
             var line = "";
             _this._headers.forEach(function (head) {
                 var val = arr[head] == undefined ? "" : arr[head];
-                val = val.toString().search(",") >= 0 ? "\"" + val + "\"" : val;
+                if (typeof val === 'string')
+                    val = val ? val.replace(/"/g, '""') : val;
                 if (line.length) {
-                    line = line + ", " + val;
+                    line = "".concat(line, ",\"").concat(val, "\"");
                 }
                 else {
-                    line = "" + (val === undefined ? "" : val);
+                    line = "\"".concat(val === undefined ? "" : val, "\"");
                 }
             });
             str = str + "\n" + line;
