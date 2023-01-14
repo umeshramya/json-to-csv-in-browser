@@ -3,11 +3,11 @@ var {JsonArray, download, CsvTojson} = require("json-to-csv-in-browser")
 let mybtn = document.getElementById("btn").addEventListener("click",()=>{
 
   let arr = [
-    {name : `umesh, bilsgai
-    sghg 
-    susuus`, age : 53},
-    {name : "ramya", age : 38},
-    {name : "pradyu", age : 22}
+    {name : `umesh`, age : 53  , gender:"Male"},
+    {name : "ramya", age : 38, gender:"Female"},
+    {name : "pradyu", gender:"Male"},
+    {class : 5}
+    
 ]
   let jsonArray = new JsonArray(arr);
   let str = jsonArray.convertToCSVstring();
