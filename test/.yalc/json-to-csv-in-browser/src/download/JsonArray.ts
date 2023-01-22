@@ -14,8 +14,9 @@ export class JsonArray {
       let line = "";
       this._headers.forEach((hl: any) => {
         const found = el[hl];
+        let removecoma = `${found}`.replace(/,/g, "")
         if (found) {
-          line = `${line}${found},`;
+          line = `${line}${removecoma},`;
         } else {
           line = `${line},`;
         }
@@ -38,6 +39,5 @@ export class JsonArray {
       });
     });
 
-    console.log(this._headers);
   }
 }

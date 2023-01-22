@@ -13,8 +13,9 @@ var JsonArray = /** @class */ (function () {
             var line = "";
             _this._headers.forEach(function (hl) {
                 var found = el[hl];
+                var removecoma = "".concat(found).replace(/,/g, "");
                 if (found) {
-                    line = "".concat(line).concat(found, ",");
+                    line = "".concat(line).concat(removecoma, ",");
                 }
                 else {
                     line = "".concat(line, ",");
@@ -35,7 +36,6 @@ var JsonArray = /** @class */ (function () {
                 }
             });
         });
-        console.log(this._headers);
     };
     return JsonArray;
 }());
